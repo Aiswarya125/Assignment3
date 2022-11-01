@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-xs-12">
+            <!-- <button class="btn btn-primary" (click)="showMessage = !showMessage" >Display Details</button> -->
+            <button class="btn btn-primary" (click)="onshowMessage()" >Display Details</button>
+            <p *ngIf="showMessage">Secret Password = Tuna</p>
+            <div *ngFor="let logItem of log" [ngStyle]="{backgroundColor: logItem >=5 ? 'orange' : 'transparent'}" [ngClass]="{'text-color': logItem >=5}">{{logItem}}</div>
+        </div>
+    </div>
+</div>
+
